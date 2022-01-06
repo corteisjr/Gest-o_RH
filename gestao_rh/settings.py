@@ -34,16 +34,17 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Minhas apps
-    'empresas',
-    'Funcionarios',
     'departamentos',
     'documentos',
+    'empresas',
+    'Funcionarios',
     'registro_hora_extra'
 ]
 
