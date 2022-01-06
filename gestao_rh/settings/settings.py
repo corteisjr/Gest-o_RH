@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'empresas',
     'departamentos',
     'Funcionarios',
-    'registro_hora_extra'
+    'registro_hora_extra',
+    'core'
 ]
 
 SITE_ID = 1
