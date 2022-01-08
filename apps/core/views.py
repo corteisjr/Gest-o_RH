@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from Funcionarios.models import Funcionario
 
 @login_required
 def homeview(request):
-    return render(request, template_name='home/index.html', status=200)
+    usuario = request.user
+    
+    context = {
+        'usuario': usuario
+    }
+    return render(request, template_name='home/index.html', status=200, context=context)
