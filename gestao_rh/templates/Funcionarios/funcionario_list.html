@@ -9,13 +9,20 @@
             <thead>
                 <th scope="col">Nome</th>
                 <th scope="col">Email</th>
-                <th scope="col">Empresa</th>
+                <th scope="col">Opções</th>
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="{% url 'update_funcionarios' Funcionario.id%}">{{Funcionario.nome}}</a></td>
+                    <td>
+                  {{Funcionario.nome}}
+                    </td>
                     <td>{{Funcionario.email}}</td>
-                    <td>{{Funcionario.empresas}}</td>
+                    <td>
+                        <div class="p-2">
+                            <a href=""><span><i class="fas fa-trash"></i></span></a>
+                            <a href="{% url 'update_funcionarios' Funcionario.id%}"><span><i class="fas fa-edit"></i></span></a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
