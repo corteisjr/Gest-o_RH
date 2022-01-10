@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse
-from django.views.generic import ListView
+from django.views.generic import ListView, UpdateView
 from  Funcionarios.models import Funcionario
 
 
@@ -13,3 +13,7 @@ class listFuncionario(ListView):
         empresa_logada= self.request.user.funcionario.empresas
         queryset= Funcionario.objects.filter(empresas=empresa_logada)
         return queryset
+    
+class updateFuncionario(UpdateView):
+    model = Funcionario
+    fields = ['nome', 'departamentos']

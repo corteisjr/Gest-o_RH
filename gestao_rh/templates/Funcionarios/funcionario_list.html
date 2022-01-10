@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{Funcionario.nome}}</td>
+                    <td><a href="{% url 'update_funcionarios' Funcionario.id%}">{{Funcionario.nome}}</a></td>
                     <td>{{Funcionario.email}}</td>
                     <td>{{Funcionario.empresas}}</td>
                 </tr>
