@@ -6,4 +6,3 @@ from  Funcionarios.models import Funcionario
 
 class listFuncionario(ListView):
     model = Funcionario
-    
