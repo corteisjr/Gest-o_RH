@@ -2,3 +2,37 @@
     margin: 0 auto;
     width: 100%;
 }
+
+
+/* Lista de funcionario */
+
+.list-div{
+    padding: 0;
+}
+
+.func-list {
+    padding-left: 0;
+}
+
+.func-item {
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.fas.fa-trash, .fas.fa-edit {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.fas.fa-trash {
+    color: #db1e47;
+}
+
+.fas.fa-edit {
+    color: #13c43f;
+}

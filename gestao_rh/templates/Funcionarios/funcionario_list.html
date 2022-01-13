@@ -4,13 +4,15 @@
 {% block content %}
     <h3 class="text-center mt-4">Lista de Funcionários</h3>
     
-    {% for Funcionario in object_list %}
-        <table class="table table-dark">
+    
+
+        <table class="table table-striped">
             <thead>
                 <th scope="col">Nome</th>
                 <th scope="col">Email</th>
                 <th scope="col">Opções</th>
             </thead>
+            {% for Funcionario in object_list %}
             <tbody>
                 <tr>
                     <td>
@@ -19,14 +21,15 @@
                     <td>{{Funcionario.email}}</td>
                     <td>
                         <div class="p-2">
-                            <a href=""><span><i class="fas fa-trash"></i></span></a>
+                            <a href="{% url 'delete_funcionarios' Funcionario.id%}"><span><i class="fas fa-trash"></i></span></a>
                             <a href="{% url 'update_funcionarios' Funcionario.id%}"><span><i class="fas fa-edit"></i></span></a>
                         </div>
                     </td>
                 </tr>
             </tbody>
+            {% endfor %}
         </table>
-    {% endfor %}
+   
         
 {% endblock content %}
     
