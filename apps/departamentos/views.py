@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.views.generic import ListView
+from departamentos.models import Departamento
+from Funcionarios.models import Funcionario
 
-# Create your views here.
+# Listar Departamentos
+
+class listDepartamento(ListView):
+    model = Departamento

@@ -9,6 +9,7 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('', include('apps.core.urls')),
     path('funcionarios/', include('apps.Funcionarios.urls.homeUrls')),
+    path('departamentos/', include('apps.departamentos.urls.departamentoUrls')),
     path('empresa/', include('apps.empresas.urls.empresaUrls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls'))

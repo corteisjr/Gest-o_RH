@@ -1,6 +1,4 @@
 from django.http.response import HttpResponse
-from django.shortcuts import redirect, render
-from django.urls import reverse
 from django.urls.base import reverse_lazy
 from django.views.generic import ListView, UpdateView
 from django.views.generic.edit import DeleteView
