@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.views.generic import ListView
+from django.views.generic import ListView, UpdateView
 from departamentos.models import Departamento
 # Listar Departamentos
 
@@ -11,3 +11,7 @@ class listDepartamento(ListView):
     def get_queryset(self):
         empresa_logada = self.request.user.funcionario.empresas
         return Departamento.objects.filter(empresas=empresa_logada)
+    
+class updadeDepartamento(UpdateView):
+    model = Departamento
+    fields = ['nome']

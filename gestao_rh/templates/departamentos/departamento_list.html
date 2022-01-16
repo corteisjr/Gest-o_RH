@@ -8,15 +8,20 @@
 
         <table class="table table-striped">
             <thead>
-                <th scope="col">Chefe do departamento</th>
+                <th scope="col">Departamento</th>
             </thead>
             {% for Departamento in object_list %}
             <tbody>
                 <tr>
-                    <td>
+                    <td> De: 
                   {{Departamento.nome}}
                     </td>
-                    <td></td>
+                    <td>
+                        <div class="p-2">
+                            <a href=""><span><i class="fas fa-trash"></i></span></a>
+                            <a href="{% url 'update_departamentos' Departamento.id%}"><span><i class="fas fa-edit"></i></span></a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
             {% endfor %}
