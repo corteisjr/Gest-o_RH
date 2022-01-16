@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 
 
+{% block title %}
+    Funcionários
+{% endblock title %}
+    
+
 {% block content %}
     <h3 class="text-center mt-4">Lista de Funcionários</h3>
     
     
     <a href="{% url  'create_funcionario' %}" class="btn btn-primary mb-4">Novo</a>
+    <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <th scope="col">Nome</th>
                 <th scope="col">Email</th>
-                <!-- <th scope="col">Departamento</th> -->
-                <th scope="col">Opções</th>
             </thead>
             {% for Funcionario in object_list %}
-            <tbody>
+            <tbody class="func-list func-item">
                 <tr>
                     <td>
                   {{Funcionario.nome}}
@@ -29,10 +33,9 @@
                     </td>
                 </tr>
             </tbody>
-            {% endfor %}
-
-          
+            {% endfor %}  
         </table>
+    </div>
    
         
 {% endblock content %}

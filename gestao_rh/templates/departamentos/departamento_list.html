@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 
+{% block title %}
+    Departamentos
+{% endblock title %}
+    
+
 {% block content %}
     <h3 class="text-center mt-4">Lista de departamentos</h3>
     
@@ -11,7 +16,7 @@
                 <th scope="col">Departamento</th>
             </thead>
             {% for Departamento in object_list %}
-            <tbody>
+            <tbody class="func-item ">
                 <tr>
                     <td> De: 
                   {{Departamento.nome}}
