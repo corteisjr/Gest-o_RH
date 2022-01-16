@@ -6,7 +6,7 @@ from django.urls import reverse
 
 
 class Funcionario(models.Model):
-    nome = models.CharField(max_length=100)
+    nome = models.CharField(max_length=100, null=True, blank=False)
     email = models.EmailField()
     user = models.OneToOneField(User, on_delete=models.PROTECT, unique=True)
     departamentos = models.ManyToManyField(Departamento)
