@@ -1,6 +1,8 @@
 import os
 import sys
 from pathlib import Path
+import dotenv
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +35,9 @@ INSTALLED_APPS = [
     'departamentos',
     'Funcionarios',
     'registro_hora_extra',
-    'core'
+    'core',
+    # Apps terceiros
+    'agora',
 ]
 
 SITE_ID = 1

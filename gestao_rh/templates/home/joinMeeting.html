@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'css/meating.css' %}">
+{% block styles %}
+    
+{% endblock styles %}
+    
+
+{% block title %}
+    Reunião
+{% endblock title %}
+
+
+{% block content %}
+    <h2>Acessar Reunião</h2>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <p>Id da reunião ou nome</p>
+            <input type="text" name="channel" value="" placeholder="Id ou nome da reunião">
+            <button type="submit" name="button" class="btn">Entrar</button>
+        </form>
+        {% csrf_token %}
+        <div class="flex">
+            <a href=""><button type="button" name="button" class="new">Reunir</button></a>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="new" value="new">
+                <button type="submit" name="button" class="new">Nova</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+    
