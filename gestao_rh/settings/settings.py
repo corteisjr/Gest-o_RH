@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'core',
     # Apps terceiros
     'agora',
+    'bootstrapform',
 ]
 
 SITE_ID = 1

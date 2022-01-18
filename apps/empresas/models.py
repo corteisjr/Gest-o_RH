@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.urls import reverse
 
 class Empresa(models.Model):
-    name = models.CharField(max_length=100, help_text='Nome da empresa')
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
